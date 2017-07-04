@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+namespace _13._1000_days
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string currentDateAsString = Console.ReadLine();
+            var format = "dd-MM-yyyy";
+            var currentDay= DateTime.ParseExact(currentDateAsString, format, CultureInfo.InvariantCulture);
+            currentDay = currentDay.AddDays(999);
+            Console.WriteLine(currentDay.ToString(format));
+        }
+    }
+}
